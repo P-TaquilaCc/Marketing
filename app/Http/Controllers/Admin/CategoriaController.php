@@ -13,4 +13,24 @@ class CategoriaController extends Controller
         $categoria_negocios= CategoriaNegocio::paginate(10);
         return view('admin.categorias.list', compact('categoria_negocios'));
     }
+
+    public function categoryadd(){
+        return view('admin.categorias.add');
+    }
+
+    public function add(){
+
+    }
+
+    public function categoryedit(){
+        return view('admin.categorias.edit');
+    }
+
+    public function update(){
+
+    }
+
+    public function delete(){
+
+    }
 }

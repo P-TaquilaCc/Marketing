@@ -17,7 +17,6 @@ class CreateCategoriaProductosTable extends Migration
             $table->id();
             $table->string('nombre',255);
             $table->string('imagen',255);
-            $table->integer('estado');
             $table->timestamps();
         });
     }

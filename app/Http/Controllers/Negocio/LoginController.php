@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Negocio;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\Admin;
+use App\Models\Negocio;
 use Illuminate\Support\Facades\Auth;
 
-class AdminController extends Controller
+class LoginController extends Controller
 {
     function check(Request $request){
 
@@ -22,16 +22,15 @@ class AdminController extends Controller
 
         ]);
 
-        if(Auth::guard('admin')->attempt(['correo'=> $request->email,'password' => $request->password])){
-            return redirect()->route('admin.dashboard');
+        if(Auth::guard('negocio')->attempt(['correo'=> $request->email,'password' => $request->password])){
+            return redirect()->route('negocio.dashboard');
         }else{
-            return redirect()->route('admin.login')->with('fail','Credenciales incorrectas');
+            return redirect()->back()->with('fail','Credenciales incorrectas');
         }
     }
 
     function logout(){
-        Auth::guard('admin')->logout();
-        return redirect('/admin');
+        Auth::guard('negocio')->logout();
+        return redirect('/');
     }
-
 }

@@ -29,7 +29,7 @@
 
               </div>
               <h4 class="card-title text-center mb-5 fw-light fs-5">Iniciar Sesión para Continuar</h4>
-              <form >
+              <form action={{ route('negocio.check')}} method="post">
                   @if (Session::get('fail'))
                       <div class="alert alert-danger">
                           {{ Session::get('fail') }}

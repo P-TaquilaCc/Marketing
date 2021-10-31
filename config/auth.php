@@ -23,6 +23,11 @@ return [
         'modelo' => App\Models\Admin::class,
     ],
 
+    'negocio' => [
+        'driver' => 'eloquent',
+        'modelo' => App\Models\Negocio::class,
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -49,6 +54,11 @@ return [
         'admin' => [
             'driver' => 'session',
             'provider' => 'admins',
+        ],
+
+        'negocio' => [
+            'driver' => 'session',
+            'provider' => 'negocios',
         ],
 
     ],
@@ -84,6 +94,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
+
+        'negocios' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Negocio::class,
+        ],
     ],
 
     /*
@@ -112,6 +127,11 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
+        ],
+
+        'negocio' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Negocio::class,
         ]
     ],
 
