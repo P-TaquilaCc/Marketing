@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Cupon extends Model
 {
     use HasFactory;
+    protected $table = 'cupons';
+    protected $fillable = [
+        'codigo', 'porcentaje', 'fechaInicio',
+        'fechaFin', 'estado'
+    ];
 }

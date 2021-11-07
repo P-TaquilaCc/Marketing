@@ -42,11 +42,11 @@
         <div class="mobile_nav_items">
             <a href="{{ route('negocio.dashboard') }}"><i class="fas fa-home"></i></i><span>Dashboard</span></i></a>
 
-            <a href="{{ route('negocio.listCategory') }}"><i class="fas fa-edit"></i><span>Categorías</span></i></a>
-            <a href="{{ route('negocio.listProduct') }}"><i class="fas fa-box"></i><span>Productos</span></i></a>
+            <a href="{{ route('negocio.categoria.index') }}"><i class="fas fa-edit"></i><span>Categorías</span></i></a>
+            <a href="{{ route('negocio.producto.index') }}"><i class="fas fa-box"></i><span>Productos</span></i></a>
             <a href="{{ route('negocio.listOrder') }}"><i class="fas fa-list-alt"></i><span>Pedidos</span></i></a>
-            <a href="{{ route('negocio.listCupon') }}"><i class="fas fa-money-check-alt"></i><span>Cupones</span></i></a>
-            <a href="{{ route('negocio.listBanner') }}"><i class="fas fa-camera-retro"></i><span>Banners</span></i></a>
+            <a href="{{ route('negocio.cupon.index') }}"><i class="fas fa-money-check-alt"></i><span>Cupones</span></i></a>
+            <a href="{{ route('negocio.banner.index') }}"><i class="fas fa-camera-retro"></i><span>Banners</span></i></a>
             <a href="{{ route('negocio.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i></i><span>Cerrar Sesión</span></i></a>
             <form action="{{ route('negocio.logout') }}" id="logout-form" method="post">@csrf</form>
         </div>
@@ -57,11 +57,11 @@
     <div class="sidebar">
         <a href="{{ route('negocio.dashboard') }}"><i class="fas fa-home"></i></i><span>Dashboard</span></i></a>
 
-        <a href="{{ route('negocio.listCategory') }}"><i class="fas fa-edit"></i><span>Categorías</span></i></a>
-        <a href="{{ route('negocio.listProduct') }}"><i class="fas fa-box"></i><span>Productos</span></i></a>
+        <a href="{{ route('negocio.categoria.index') }}"><i class="fas fa-edit"></i><span>Categorías</span></i></a>
+        <a href="{{ route('negocio.producto.index') }}"><i class="fas fa-box"></i><span>Productos</span></i></a>
         <a href="{{ route('negocio.listOrder') }}"><i class="fas fa-list-alt"></i><span>Pedidos</span></i></a>
-        <a href="{{ route('negocio.listCupon') }}"><i class="fas fa-money-check-alt"></i><span>Cupones</span></i></a>
-        <a href="{{ route('negocio.listBanner') }}"><i class="fas fa-camera-retro"></i><span>Banners</span></i></a>
+        <a href="{{ route('negocio.cupon.index') }}"><i class="fas fa-money-check-alt"></i><span>Cupones</span></i></a>
+        <a href="{{ route('negocio.banner.index') }}"><i class="fas fa-camera-retro"></i><span>Banners</span></i></a>
         <a href="{{ route('negocio.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i></i><span>Cerrar Sesión</span></i></a>
         <form action="{{ route('negocio.logout') }}" id="logout-form" method="post">@csrf</form>
     </div>

@@ -84,14 +84,18 @@ Route::prefix('/')->name('negocio.')->group(function(){
         Route::post('/logout',[LoginController::class,'logout'])->name('logout');
 
           //Categorias de Productos
-          Route::get('/categorias/list', [CategoriaProductoController::class,'list'])->name('listCategory');
-          Route::get('/categorias/add', [CategoriaProductoController::class,'categoryadd'])->name('categoryadd');
-          Route::get('/categorias/edit', [CategoriaProductoController::class,'categoryedit'])->name('categoryedit');
+          Route::get('/categorias/list', [CategoriaProductoController::class,'list'])->name('categoria.index');
+          Route::get('/categorias/create', [CategoriaProductoController::class,'create'])->name('categoria.create');
+          Route::get('/categorias/edit', [CategoriaProductoController::class,'edit'])->name('categoria.edit');
+
+          Route::post('/categorias/addcategoria', [CategoriaProductoController::class,'add'])->name('categoria.add');
 
           //Productos
-          Route::get('/productos/list', [ProductoController::class,'list'])->name('listProduct');
-          Route::get('/productos/add', [ProductoController::class,'productadd'])->name('productadd');
-          Route::get('/productos/edit', [ProductoController::class,'productedit'])->name('productedit');
+          Route::get('/productos/list', [ProductoController::class,'list'])->name('producto.index');
+          Route::get('/productos/create', [ProductoController::class,'create'])->name('producto.create');
+          Route::get('/productos/edit', [ProductoController::class,'edit'])->name('producto.edit');
+
+          Route::post('/productos/addproducto', [ProductoController::class,'add'])->name('producto.add');
 
           //Pedidos
           Route::get('/pedidos/list', [PedidoNegocioController::class,'list'])->name('listOrder');
@@ -99,14 +103,19 @@ Route::prefix('/')->name('negocio.')->group(function(){
 
 
           //Cupones
-          Route::get('/cupones/list', [CuponController::class,'list'])->name('listCupon');
-          Route::get('/cupones/add', [CuponController::class,'cuponadd'])->name('cuponadd');
-          Route::get('/cupones/edit', [CuponController::class,'cuponedit'])->name('cuponedit');
+          Route::get('/cupones/list', [CuponController::class,'list'])->name('cupon.index');
+          Route::get('/cupones/create', [CuponController::class,'create'])->name('cupon.create');
+          Route::get('/cupones/edit', [CuponController::class,'edit'])->name('cupon.edit');
+
+          Route::post('/cupones/addcupon', [CuponController::class,'add'])->name('cupon.add');
 
           //Banners
-          Route::get('/banners/list', [BannerController::class,'list'])->name('listBanner');
-          Route::get('/banners/add', [BannerController::class,'banneradd'])->name('banneradd');
-          Route::get('/banners/edit', [BannerController::class,'banneredit'])->name('banneredit');
+          Route::get('/banners/list', [BannerController::class,'list'])->name('banner.index');
+          Route::get('/banners/create', [BannerController::class,'create'])->name('banner.create');
+          Route::get('/banners/edit', [BannerController::class,'edit'])->name('banner.edit');
+
+          Route::post('/banners/addbanner', [BannerController::class,'add'])->name('banner.add');
+
 
 
     });
